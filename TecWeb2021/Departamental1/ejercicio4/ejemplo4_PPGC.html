@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8"/>
+	<meta nombre="ventana gráfica" content="width=device-width, initial-scale=1.0">
+	<title>EJERCICIO 4</title>
+	 <meta http-equiv=”Content-Type” content=”text/html; charset=UTF-8″ />
+    <style>
+     	body {
+            
+     		background-image: url(./fondo3.jpg);
+            background-size: 267px;
+     		background-position: left top;
+     		background-attachment: scroll;
+            background-repeat: repeat;
+            background-color: black;
+     	}
+     </style>
+</head>
+<body>
+    <header>
+        <nav></nav>
+    </header>
+
+    <main>
+        <FONT COLOR="white">
+        <center>
+         <h1> Formulario de amor</h1>
+        </center>
+        <!--
+            action = url a donde se mandan los datos del formulario
+            GET    = Los datos se mandan en URL
+            POST   = Se mandan con la página (body)
+
+            POST
+                universidad=IPN = value
+                escuela=UPIIZ = value
+                ramaconocimiento=2 =value
+                grado=3
+                estatus=2
+                promedio=8
+                semestre=4
+
+            GET
+                ?universidad=IPN&escuela=ESCOM&ramaconocimiento=2&grado=3&estatus=2&promedio=8&semestre=4 
+        -->
+
+        <form action="registro.php" method="GET">
+           
+            <table align="center">
+                <tr>
+                    <td><label for="nombre">Nombre completo:</label></td>
+                    <td><input type="text" name="nombre" id="nombre" value=""> </td>
+                </tr>
+                <tr>
+                    <td><label>Edad:</label></td>
+                    <td>
+                        <select name="edad" id="edad">
+                            <option value="1">18</option>
+                            <option value="2">19</option>
+                            <option value="3">20</option>
+                            <option value="4">21</option>
+                            <option value="5">22</option>
+                            <option value="5">23</option>
+                            <option value="5">24</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="ramaconocimiento">Ocupación:</label></td>
+                    <td>
+                        <select name="ramaconocimiento" id="ramaconocimiento">
+                            <option value="1">Estudiante</option>
+                            <option value="2">Trabajador</option>
+                            <option value="3">Nini</option>
+                            <option value="4">Neni</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label for="grado">Grado de estudios máximo:</label></td>
+                    <td>
+                        <select name="grado" id="grado">
+                            <option value="1">Doctorado</option>
+                            <option value="2">Maestría</option>
+                            <option value="3">Especialidad</option>
+                            <option value="4">Licenciatura</option>
+                            <option value="5">Nivel Medio Superior</option>
+                        </select>
+                        <label>
+                            <input type="radio" value="1" name="estatus" id="estatus"> Incompleto
+                        </label>
+                        <label>
+                            <input type="radio" value="2" name="estatus" id ="estatus"> Completo
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><label>Estatura:</label></td>
+                    <td>
+                        <label>
+                            <input type="number" name="estatura" id="estatura" min="0"> cm
+                        </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="Registrarse"></td>
+                    <td><input type="reset" value="Limpiar campos"></td>
+            </table>
+         </form>
+        </FONT>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
